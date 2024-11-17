@@ -1,0 +1,307 @@
+*{
+    scroll-behavior: smooth;
+    animation: floatimage 8s ease-in-out infinite;
+  
+
+}
+
+html{
+    position: relative;
+}
+body{
+    margin-bottom: 120px;
+     
+    
+}
+.jumbotron{
+    background-image: url ('img/pexel.png') ;
+    padding: 15rem;
+    padding-top:  5rem; 
+}
+
+
+.jumbotron img {
+    width: 200px;
+    border: 5px solid black;
+   height: 200px;
+   margin-top: 20px;
+   box-shadow: 0 0 50px aqua;
+   cursor: pointer;
+   animation: floatimage 2s ease-in-out infinite;
+   transition:0.4s ;
+}
+.jumbotron img:hover{
+    box-shadow: 0 0 50px aqua,
+                0 0 35px aqua
+                0 0 45px aqua
+}
+@keyframes floatimage{
+    0%{
+        transform: translate(0);
+        
+    }
+    50%{
+        transform: translate(-5.4rem);
+
+    }
+    100%{
+        transform: translate(0);
+
+    }
+}
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: 'Fais Muchlisin';
+    color: aqua;
+    animation: words 20s infinite;
+}
+
+
+.text-animation span::after{
+    content: '';
+    background-color: #eee;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14)infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid aqua;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: 'Fais Muchlisin';
+    }
+    21%,40%{
+        content: 'Fais mode coding';
+    }
+    41%,60%{
+        content: 'FIZ 80';
+    }
+    
+}
+
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid aqua;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: black;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.6s ease;
+    padding-top: 7px;
+}
+
+.social-icons a:hover{
+    color: white;
+    transform: scale(1,2) translateY(-10px);
+    box-shadow: 0 0 30px;
+    background: black
+}
+ hr{
+    width: 1000px;
+    border-top: 5px solid black;
+}
+section{
+min-height: 600px;
+}
+.portfolio-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.portfolio-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+}
+
+.portfolio-item:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    padding: 40px;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.2); /* Image zooms in when hovering */
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-info {
+    transform: translateY(0); /* Slide up effect */
+}
+
+
+
+
+/* General Container */
+
+.experience-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.experience-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.experience-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.experience-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.experience-item:hover img {
+    transform: scale(1.2); /* Image zooms in when hovering */
+}
+
+.experience-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.experience-item:hover .experience-info {
+    transform: translateY(0); /* Slide up effect */
+}
+
+
+
+
+
+.contact{
+   min-height: 800px ;
+   background-color: #eee;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 150px;
+    background-color: #333;
+    padding-top: 30px;
+}
+footer p{
+    font-size: 0,9em;
+    color: #aaa;
+}
+footer p i{
+    color: salmon;
+}
+
+.h2 a{
+    padding-left: 3px;
+}
+
+
